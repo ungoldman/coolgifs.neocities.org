@@ -1,6 +1,6 @@
 # [coolgifs.neocities.org](http://coolgifs.neocities.org)
 
-Hacked together for [The Web 1.0 Conference](http://websiteconf.neocities.org)
+Hacked together for [The Web 1.0 Conference](http://websiteconf.neocities.org).
 
 ## License
 
