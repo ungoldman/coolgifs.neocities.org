@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>The web site of cool gifs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/styles/reset.css">
   <link rel="stylesheet" href="/styles/animation.css">
   <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body class="intro">
   <div id="container" class="animate floataround ease-in-out d-6 infinite">
-    <h1 id="title" class="animate floataround ease-in-out d-5 infinite">cool gifs</h1>
+    <h1 id="title" class="animate floataround ease-in-out d-5 infinite"><span class="title">cool</span> <span class="title">gifs</span></h1>
 
     <div id="start">
       <a href="https://github.com/ngoldman/coolgifs.neocities.org" class="animate floataround-4 ease-in-out d-4 infinite">wow</a>
@@ -44,7 +45,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', function (event) {
-      $('#title').lettering()
+      $('.title').lettering()
       setInterval(createGif, 100)
     })
   </script>

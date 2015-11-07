@@ -51,67 +51,67 @@ h1 {
     transition: all 0.2s ease-out;
   }
 
-  h1#title span:hover {
+  h1#title .title span:hover {
     color: rgba(32,200,32,.9);
     top: -16px;
   }
 
-  h1#title span:nth-child(2n+3) {
+  h1#title .title span:nth-child(2n+3) {
     transform: rotate(3deg);
   }
 
-  h1#title span:nth-child(2n+3):hover {
+  h1#title .title span:nth-child(2n+3):hover {
     color: rgba(230,32,230,.9);
     transform: rotate(-1deg);
   }
 
-  h1#title span:nth-child(3n-1) {
+  h1#title .title span:nth-child(3n-1) {
     transform: rotate(2deg);
   }
 
-  h1#title span:nth-child(3n-1):hover {
+  h1#title .title span:nth-child(3n-1):hover {
     top: -7px;
     color: rgba(32,200,200,.9);
     transform: rotate(-2deg);
   }
 
-  h1#title span:nth-child(2n+4) {
+  h1#title .title span:nth-child(2n+4) {
     transform: rotate(-2deg);
   }
 
-  h1#title span:nth-child(2n+4):hover {
+  h1#title .title span:nth-child(2n+4):hover {
     color: rgba(200,32,32,.9);
     transform: rotate(-5deg);
   }
 
-  h1#title .char1 {
+  h1#title .title .char1 {
     transform:rotate(-3deg);
   }
 
-  h1#title .char3 {
+  h1#title .title .char3 {
     top: -7px;
     transform: rotate(2deg);
   }
 
-  h1#title .char4 {
+  h1#title .title .char4 {
     top: -12px;
   }
-  h1#title .char4, h1#title .char10 {
+  h1#title .title .char4, h1#title .title .char10 {
     letter-spacing: -15px;
     margin-left: -11px;
   }
 
-  h1#title .char5 {}
+  h1#title .title .char5 {}
 
-  h1#title .char6 {}
+  h1#title .title .char6 {}
 
-  h1#title .char7 {}
+  h1#title .title .char7 {}
 
-  h1#title .char8 {
+  h1#title .title .char8 {
     transform: rotate(-2deg);
   }
 
-  h1#title .char9 {
+  h1#title .title .char9 {
     transform: rotate(2deg);
   }
 
@@ -163,7 +163,7 @@ img.random {
   z-index: 240;
 }
 
-/*.intro h1#title {
+/*.intro h1#title .title {
   color: rgba(32,62,200,.8);
   text-shadow: rgba(130,40,100,.6) -4px 4px 0;
 }
