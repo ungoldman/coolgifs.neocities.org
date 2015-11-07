@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Not Found</title>
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-  </head>
-  <body>
-    <h1>Page Not Found</h1>
-    <p>The requested page was not found.</p>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>The web site of coolgifs</title>
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/animation.css">
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body class="intro">
+  <div id="container" class="animate floataround ease-in-out d-6 infinite">
+    <h1 id="title" class="animate floataround ease-in-out d-5 infinite">404</h1>
+
+    <div id="start">
+      <a href="https://github.com/ngoldman/coolgifs" class="animate floataround-4 ease-in-out d-4 infinite">sorry your link ain't real</a>
+    </div>
+  </div>
+
+  <div id="background" class="bg d-80 ease-in-out infinite animate woosh"></div>
+  <div id="midground" class="bg d-60 ease-in-out infinite animate woosh"></div>
+  <div id="foreground" class="bg d-40 ease-in-out infinite animate woosh"></div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="/scripts/jquery.lettering.js"></script>
+  <script>
+    function createGif () {
+      var max = 67
+      var n = Math.floor(Math.random() * max) + 1
+      var offset = Math.floor(Math.random() * (window.innerWidth + 100) - 100)
+      var klasses = ['random', 'animate', 'slide-up', 'linear', 'd-80', 'infinite']
+
+      var img = document.createElement('img')
+
+      klasses.forEach(function (c) {
+        img.classList.add(c)
+      })
+
+      img.setAttribute('style', 'left:' + offset+'px')
+      img.setAttribute('src', '/gifs/' + n + '.gif')
+
+      document.querySelector('body').appendChild(img)
+
+      setTimeout(function(){ img.remove() }, 20000)
+    }
+
+    document.addEventListener('DOMContentLoaded', function (event) {
+      $('#title').lettering()
+      setInterval(createGif, 100)
+    })
+  </script>
+</body>
 </html>

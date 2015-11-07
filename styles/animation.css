@@ -1,0 +1,130 @@
+
+/*
+ * INNRR.NET
+ * CSS3 Animation
+ **/
+
+/*
+ * animation classes
+ **/
+
+ /* basic behavior */
+
+.animate                      { animation-play-state: running }
+.animate.on-hover             { animation-play-state: paused  }
+  .animate.on-hover:hover     { animation-play-state: running }
+.animate.unless-hover         { animation-play-state: running }
+  .animate.unless-hover:hover { animation-play-state: paused  }
+
+/*
+ * durations
+ **/
+
+/* fractions */
+.d-point5 { animation-duration: 0.5s  }
+
+/* whole numbers */
+.d-1  { animation-duration: 1s  }
+.d-2  { animation-duration: 2s  }
+.d-3  { animation-duration: 3s  }
+.d-4  { animation-duration: 4s  }
+.d-5  { animation-duration: 5s  }
+.d-6  { animation-duration: 6s  }
+.d-10 { animation-duration: 10s }
+.d-20 { animation-duration: 20s }
+.d-40 { animation-duration: 40s }
+.d-60 { animation-duration: 60s }
+.d-80 { animation-duration: 80s }
+
+/*
+ * iterations
+ **/
+
+.infinite { animation-iteration-count: infinite }
+
+/*
+ * timing functions
+ **/
+
+.linear      { animation-timing-function: linear      }
+.ease-in     { animation-timing-function: ease-in     }
+.ease-out    { animation-timing-function: ease-out    }
+.ease-in-out { animation-timing-function: ease-in-out }
+
+/*
+ * names & keyframes
+ **/
+
+/*
+ * floataround
+ **/
+
+/* default to 12 */
+.floataround   { animation-name: floataround   }
+.floataround-4 { animation-name: floataround-4 }
+
+@keyframes floataround {
+  0%   { top: 0;    }
+  50%  { top: 12px; }
+  100% { top: 0;    }
+}
+
+@keyframes floataround-4 {
+  0%   { top: 0;    }
+  50%  { top: 4px;  }
+  100% { top: 0;    }
+}
+
+/*
+ * woosh
+ **/
+
+.woosh { animation-name: woosh }
+
+@keyframes woosh {
+  0% {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  45% {
+    top: -2900px;
+  }
+  50% {
+    right: -700px;
+    top: -3100px;
+  }
+  65% {
+    right: -705px;
+    top: -3150px;
+  }
+  100% {
+    right: 0;
+    left: 0;
+    top: 0;
+  }
+}
+
+/*
+ * blink
+ **/
+
+.blink { animation-name: blink }
+
+@keyframes blink {
+  0%   { opacity: 0 }
+  45%  { opacity: 0 }
+  46%  { opacity: 1 }
+  100% { opacity: 1 }
+}
+
+/*
+ * blink
+ **/
+
+.slide-up { animation-name: slide-up }
+
+@keyframes slide-up {
+  100% { bottom: 5000px }
+}
