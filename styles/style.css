@@ -32,7 +32,7 @@ html {
 }
 
 h1 {
-  color: rgba(102,250,102,.65);
+  color: rgba(102,250,102,.9);
   font: normal 64px/1 'Press Start 2P', sans-serif;
   margin: 0 auto 1em;
   position: relative;
@@ -127,7 +127,7 @@ img.random {
 /* start */
 
 #start a {
-  color: rgba(220,100,0,.8);
+  color: rgba(240,120,20,.9);
   font-size: 28px;
   margin-bottom: 20px;
   position: relative;
@@ -172,3 +172,8 @@ img.random {
   color: rgba(32,62,200,.8);
   text-shadow: rgba(130,40,100,.6) -2px 2px 0;
 }*/
+
+.gif {
+  max-width: 200px;
+  max-height: 200px;
+}
