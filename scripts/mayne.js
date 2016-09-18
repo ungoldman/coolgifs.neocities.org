@@ -1,5 +1,5 @@
 function createGif () {
-  var max = 100
+  var max = 101
   var n = Math.floor(Math.random() * max) + 1
   var offset = Math.floor(Math.random() * (window.innerWidth + 100) - 100)
   var klasses = ['random', 'animate', 'slide-up', 'linear', 'd-80', 'infinite', 'gif']
