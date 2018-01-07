@@ -1,11 +1,23 @@
+<center>
+
 # [coolgifs.neocities.org](http://coolgifs.neocities.org)
+
+<blink>**"THE COOL GIFS SITE™"**</blink>
+
+![screenshot](screenshot.png)
+
+<marquee>The web site of cool gifs</marquee>
+
+## About
 
 Hacked together for the first [Web 1.0 Conference](http://websiteconf.neocities.org) in 2015.
 
-## n00bs beware!
+_**n00bs beware!**_
 
-This site's source code uses bleeding edge web technology like JQUERY and CSS3. NOT FOR THE FAINTHEARTED.
+This site's "source code" uses bleeding edge web technology like JQUERY and CSS3. NOT FOR THE FAINTHEARTED.
 
 ## License
 
-[CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+[CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+
+</center>
