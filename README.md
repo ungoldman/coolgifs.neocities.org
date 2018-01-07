@@ -6,7 +6,7 @@
 
 ![screenshot](screenshot.png)
 
-<marquee>The web site of cool gifs</marquee>
+<marquee><i>The web site of cool gifs</i></marquee>
 
 ## About
 
