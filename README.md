@@ -1,5 +1,3 @@
-<center>
-
 # [coolgifs.neocities.org](http://coolgifs.neocities.org)
 
 <blink>**"THE COOL GIFS SITE™"**</blink>
@@ -18,6 +16,4 @@ This site's "source code" uses bleeding edge web technology like JQUERY and CSS3
 
 ## License
 
-[CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/)
-
-</center>
+[Bad Code License](LICENSE)

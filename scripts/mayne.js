@@ -1,3 +1,7 @@
+// This source code is distrubited under the terms of the Bad Code License.
+// You are forbidden from distributing software containing this code to end
+// users, because it is bad
+
 var totalGifs = 131
 var totalSounds = 20
 var speech = 'speechSynthesis' in window
@@ -41,7 +45,6 @@ function flipMode () {
   var $mod = $('#mode')
   var lmtm = 'LightMode™'
   var on = $bod.hasClass(lmtm)
-  var speech = window.speechSynthesis
   if (on) {
     $bod.removeClass(lmtm)
     $mod.text('🌙')
