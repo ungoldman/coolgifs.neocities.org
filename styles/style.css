@@ -148,6 +148,17 @@ img.random {
 
 /* totally ripped off from http://css-tricks.com/parallax-background-css3/ */
 
+#mode {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  z-index: 9000;
+}
+
+.intro.LightMode™ .bg {
+  display: none;
+}
+
 .intro .animate#background {
   background: black url(/pics/background.png) repeat 5% 5%;
   position: absolute;

@@ -1,5 +1,6 @@
 var totalGifs = 131
 var totalSounds = 20
+var speech = 'speechSynthesis' in window
 
 function getNumber (max) {
   return Math.floor(Math.random() * max) + 1
@@ -35,8 +36,35 @@ function playSound (e) {
   createGif()
 }
 
+function flipMode () {
+  var $bod = $('.intro')
+  var $mod = $('#mode')
+  var lmtm = 'LightMode™'
+  var on = $bod.hasClass(lmtm)
+  var speech = window.speechSynthesis
+  if (on) {
+    $bod.removeClass(lmtm)
+    $mod.text('🌙')
+    speak('light mode deactivated')
+  } else {
+    $bod.addClass(lmtm)
+    $mod.text('🌞')
+    speak('light mode activated')
+  }
+}
+
+function speak (txt) {
+  if (!('speechSynthesis' in window)) return
+  var voices = speechSynthesis.getVoices()
+
+  var msg = new SpeechSynthesisUtterance(txt)
+  msg.voice = voices[getNumber(voices.length - 1)]
+  speechSynthesis.speak(msg)
+}
+
 document.addEventListener('DOMContentLoaded', function (event) {
   $('.title').lettering()
   $('.title > span').on('click', playSound)
+  $('#mode').on('click', flipMode)
   setInterval(createGif, 94)
 })
