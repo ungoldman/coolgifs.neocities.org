@@ -49,6 +49,8 @@ h1 {
     letter-spacing: 0px;
     top: -10px;
     transition: all 0.2s ease-out;
+    user-select: none;
+    -moz-user-select: none;
   }
 
   h1#title .title span:hover {
@@ -115,6 +117,10 @@ h1 {
     transform: rotate(2deg);
   }
 
+  h1#title .title span:focus {
+    color: red
+  }
+
 img.random {
   display: block;
   position: absolute;
@@ -128,7 +134,7 @@ img.random {
 
 #start a {
   color: rgba(240,120,20,.9);
-  font-size: 28px;
+  font-size: 20px;
   margin-bottom: 20px;
   position: relative;
   text-shadow: rgba(150,150,150,.4) -3px 3px 0;
