@@ -70,4 +70,5 @@ document.addEventListener('DOMContentLoaded', function (event) {
   $('.title > span').on('click', playSound)
   $('#mode').on('click', flipMode)
   setInterval(createGif, 94)
+  speak('welcome to the cool gifs site')
 })
