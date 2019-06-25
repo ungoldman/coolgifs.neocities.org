@@ -2,7 +2,7 @@
 // You are forbidden from distributing software containing this code to end
 // users, because it is bad
 
-var totalGifs = 135
+var totalGifs = 139
 var totalSounds = 20
 var speech = 'speechSynthesis' in window
 
