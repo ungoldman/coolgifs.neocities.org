@@ -6,12 +6,12 @@ var totalGifs = 141
 var totalSounds = 20
 var speech = 'speechSynthesis' in window
 
-function getNumber (max) {
+function getRandomNumber (max) {
   return Math.floor(Math.random() * max) + 1
 }
 
 function createGif () {
-  var n = getNumber(totalGifs)
+  var n = getRandomNumber(totalGifs)
   var offset = Math.floor(Math.random() * (window.innerWidth + 100) - 100)
   var klasses = ['random', 'animate', 'slide-up', 'linear', 'd-80', 'infinite', 'gif']
 
@@ -30,13 +30,20 @@ function createGif () {
 }
 
 function playSound (e) {
-  e.preventDefault()
-  var n = getNumber(totalSounds)
-  if (typeof window.Audio === 'function') {
-    var el = new Audio()
-    el.src = '/sounds/' + n + '.wav'
-    el.play()
+  if (typeof window.Audio !== 'function') return
+  var n
+
+  if (e.keyCode) {
+    n = getNumberFromKey(e.keyCode)
+    if (!n) return
   }
+
+  if (!n) n = getRandomNumber(totalSounds)
+
+  var el = new Audio()
+  el.src = '/sounds/' + n + '.wav'
+  el.play()
+
   createGif()
 }
 
@@ -56,12 +63,46 @@ function flipMode () {
   }
 }
 
+function getNumberFromKey (code) {
+  if (!code) return null
+
+  var key = keyCode(code)
+
+  switch (key) {
+    // first row
+    case 'q': return 1
+    case 'w': return 2
+    case 'e': return 3
+    case 'r': return 4
+    case 't': return 5
+    case 'y': return 6
+    case 'u': return 7
+    case 'i': return 8
+    case 'o': return 9
+    case 'p': return 10
+
+    // second row
+    case 'a': return 11
+    case 's': return 12
+    case 'd': return 13
+    case 'f': return 14
+    case 'g': return 15
+    case 'h': return 16
+    case 'j': return 17
+    case 'k': return 18
+    case 'l': return 19
+    case ';': return 20
+
+    default: return null
+  }
+}
+
 function speak (txt) {
   if (!('speechSynthesis' in window)) return
   var voices = speechSynthesis.getVoices()
 
   var msg = new SpeechSynthesisUtterance(txt)
-  msg.voice = voices[getNumber(voices.length - 1)]
+  msg.voice = voices[getRandomNumber(voices.length - 1)]
   speechSynthesis.speak(msg)
 }
 
@@ -72,3 +113,5 @@ document.addEventListener('DOMContentLoaded', function (event) {
   setInterval(createGif, 94)
   speak('welcome to the cool gifs site')
 })
+
+document.addEventListener('keydown', playSound)
