@@ -47,6 +47,27 @@ function playSound (e) {
   createGif()
 }
 
+const light = [
+  'light mode activated',
+  'dark mode deactivated',
+  'maximum brightness achieved',
+  'this is as bright as it gets',
+  'retinal destruction initiated',
+  'darkness is overrated',
+  'here we go again'
+]
+const dark = [
+  'light mode deactivated',
+  'dark mode activated',
+  'whiteness obliterated',
+  'enter the darkness',
+  'take a visual break',
+  'light is overrated',
+  'why are you still doing this?'
+]
+let lightClicks = 0
+let darkClicks = 0
+
 function flipMode () {
   var $bod = $('.intro')
   var $mod = $('#mode')
@@ -55,11 +76,11 @@ function flipMode () {
   if (on) {
     $bod.removeClass(lmtm)
     $mod.text('🌙')
-    speak('light mode deactivated')
+    speak(dark[darkClicks++ % 7])
   } else {
     $bod.addClass(lmtm)
     $mod.text('🌞')
-    speak('light mode activated')
+    speak(light[lightClicks++ % 7])
   }
 }
 
