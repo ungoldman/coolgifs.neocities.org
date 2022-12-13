@@ -2,12 +2,12 @@
 // You are forbidden from distributing software containing this code to end
 // users, because it is bad
 
-var totalGifs = 141
+var totalGifs = 145
 var totalSounds = 20
 var speech = 'speechSynthesis' in window
 
-function getRandomNumber (max) {
-  return Math.floor(Math.random() * max) + 1
+function getRandomNumber (max, min = 1) {
+  return Math.floor(min + Math.random() * (max + 1 - min))
 }
 
 function createGif () {
